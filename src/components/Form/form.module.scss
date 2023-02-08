@@ -1,0 +1,154 @@
+.form_overlay {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba($color: #23242a, $alpha: .8);
+  z-index: 5;
+}
+
+.form_wrapper {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 380px;
+  height: 500px;
+  background-color: #1c1c1c;
+  border-radius: 8px;
+  overflow: hidden;
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 500px;
+    background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+    transform-origin: bottom right;
+    animation: form-animate 6s linear infinite;
+  }
+
+  &::after {
+    animation-delay: -3s;
+  }
+}
+
+.form {
+  position: absolute;
+  inset: 2px;
+  background-color: #28292d;
+  z-index: 10;
+  border-radius: 8px;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__close {
+  position: absolute;
+  width: 35px;
+  height: 25px;
+  top: 20px;
+  right: 20px;
+  z-index: 16;
+  cursor: pointer;
+
+  & span {
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 2px;
+    background-color: #45f3ff;
+    z-index: 15;
+
+    &:nth-child(1) {
+      transform: rotate(-45deg);
+    }
+
+    &:nth-child(2) {
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.form__title {
+  color: #45f3ff;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+.input_wrapper {
+  position: relative;
+  width: 300px;
+  margin-top: 25px;
+
+  & input {
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    color: #23242a;
+    letter-spacing: 0.05em;
+    z-index: 10;
+
+    &:valid ~ span, &:focus ~ span {
+      color: #45f3ff;
+      transform: translateY(-35px);
+    }
+
+    &:valid ~ i, &:focus ~ i {
+      height: 44px;
+    }
+  }
+
+  & span {
+    position: absolute;
+    left: 0;
+    padding: 20px 0px 10px;
+    color: #8f8f8f;
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transition: .5s;
+  }
+
+  & i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #45f3ff;
+    border-radius: 4px;
+    transition: .5s;
+    pointer-events: none;
+    z-index: 9;
+  }
+}
+
+.form__btn {
+  background-color: #45f3ff;
+  padding: 11px 25px;
+  max-width: max-content;
+  margin-top: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: .8;
+  transition: .5s;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+/* ------ Animation ------ */
+
+@keyframes form-animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

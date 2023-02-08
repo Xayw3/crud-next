@@ -1,0 +1,61 @@
+@import './reset.scss';
+
+body {
+  background-color: #333;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* ------ Media Queries ------ */
+
+/* 1201-1400px */
+
+@media screen and (max-width: 1400px) {
+  .container {
+    max-width: 1110px;
+  }
+}
+
+
+/* 992-1200px */
+
+@media screen and (max-width: 1300px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* 768-991px */
+
+@media screen and (max-width: 991px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+/* 576px-767px */
+
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+/* 451px-575px */
+
+@media screen and (max-width: 575px) {
+  .container {
+    max-width: 95%;
+  }
+}
+
+/* 320-450px */
+
+@media screen and (max-width: 450px) {
+  .container {
+    max-width: 90%;
+  }
+}
