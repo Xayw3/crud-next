@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import styles from './users.module.scss';
-import Users from "@/models/users";
+import Users, { User } from "@/models/users";
 import Form from "../Form/Form";
 import Header from "../Header/Header";
 import NewUser from "../NewUser/NewUser";
@@ -11,9 +11,9 @@ const Users = () => {
   const [edit, setEdit] = useState(false);
   const [userId, setUserId] = useState(0);
   const [addUser, setAddUser] = useState(false);
-  const [user, setUser] = useState({
+  const [user, setUser] = useState<User>({
     name: '',
-    age: null,
+    age: 0,
     email: '',
     password: '',
   });
@@ -85,7 +85,11 @@ const Users = () => {
                     </h3>
                     <div className={styles.card__btns}>
                       <div>
-                        <button className={styles.card__btn} onClick={() => { setUserId(id); setEdit(true); }}>Edit</button>
+                        <button 
+                          className={styles.card__btn} 
+                          onClick={() => { setUserId(id); setEdit(true); setUser({ ...user, name: name, age: age, email: email, password: password }) }}>
+                            Edit
+                        </button>
                       </div>
                       <div>
                         <button className={styles.card__btn} onClick={() => handleDelete(id)}>Delete</button>

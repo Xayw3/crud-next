@@ -6,4 +6,11 @@ export type Users = {
   id: number
 };
 
+export type User = {
+  name: string,
+  age: number,
+  email: string,
+  password: string,
+}
+
 export default Users;
