@@ -5,9 +5,11 @@ import Users, { User } from "@/models/users";
 import Form from "../Form/Form";
 import Header from "../Header/Header";
 import NewUser from "../NewUser/NewUser";
+import Loader from "../Loader/Loader";
 
 const Users = () => {
   const [data, setData] = useState<Users[]>([]);
+  const [loader, setLoader] = useState(false)
   const [edit, setEdit] = useState(false);
   const [userId, setUserId] = useState(0);
   const [addUser, setAddUser] = useState(false);
@@ -19,11 +21,18 @@ const Users = () => {
   });
 
   const baseUrl = process.env.BASE_URL;
-  
+
   const getUsers = async () => {
-    const users = await axios.get(`${baseUrl}/api/users`);
-    setData(users.data);
-  };
+    setLoader(true);
+    try {
+      const users = await axios.get(`${baseUrl}/api/users`);
+      setData(users.data);
+    } catch (error) {
+      console.log(error)
+    } finally {
+      setLoader(false)
+    }
+  }
 
   const handleDelete = async (id: number) => {
     try {
@@ -56,6 +65,9 @@ const Users = () => {
 
   return (
     <>
+      {
+        loader ? <Loader /> : null
+      }
       <Header addBtn={() => setAddUser(true)} />
       <section className={styles.users}>
         <div className="container">
@@ -92,7 +104,7 @@ const Users = () => {
                         </button>
                       </div>
                       <div>
-                        <button className={styles.card__btn} onClick={() => handleDelete(id)}>Delete</button>
+                        <button className={`${styles.card__btn} ${styles.card__btn_delete}`} onClick={() => handleDelete(id)}>Delete</button>
                       </div>
                     </div>
                   </div>
