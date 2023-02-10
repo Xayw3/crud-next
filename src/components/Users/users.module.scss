@@ -12,7 +12,7 @@
   position: relative;
   min-width: 400px;
   max-width: min-content;
-  height: 240px;
+  height: max-content;
   background-color: #333;
   transition: .5s;
 
@@ -46,7 +46,7 @@
   z-index: 3;
   position: relative;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   padding: 40px;
   gap: 20px;
 }

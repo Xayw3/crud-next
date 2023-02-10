@@ -21,23 +21,23 @@ const Form: FC<FormProps> = ({
         </button>
         <h2 className={styles.form__title}>{title}</h2>
         <div className={styles.input_wrapper}>
-          <input type="text" onChange={handleChange} name="name" autoComplete="off" required />
-          <span>Name</span>
+          <input type="text" onChange={handleChange} placeholder='name' name="name" autoComplete="off" required />
+          <label htmlFor='name'>Name</label>
           <i />
         </div>
         <div className={styles.input_wrapper}>
-          <input type="number" onChange={handleChange} name="age" required />
-          <span>Age</span>
+          <input type="number" onChange={handleChange} name="age" placeholder='age' required />
+          <label htmlFor='age'>Age</label>
           <i />
         </div>
         <div className={styles.input_wrapper}>
-          <input type="email" onChange={handleChange} name="email" autoComplete="off" required />
-          <span>Email</span>
+          <input type="email" onChange={handleChange} name="email" placeholder='email' autoComplete="off" required />
+          <label htmlFor='email'>Email</label>
           <i />
         </div>
         <div className={styles.input_wrapper}>
-          <input type="text" onChange={handleChange} name="password" required />
-          <span>Password</span>
+          <input type="text" onChange={handleChange} name="password" placeholder='password' required />
+          <label htmlFor='password'>Password</label>
           <i />
         </div>
         <button className={styles.form__btn} type="button" onClick={handleClick}>{btnText}</button>

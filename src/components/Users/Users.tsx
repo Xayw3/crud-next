@@ -124,7 +124,7 @@ const Users = () => {
             }
             {
               addUser ? (
-                <NewUser closeBtn={() => setAddUser(false)} addButton={getUsers} />
+                <NewUser closeBtn={() => setAddUser(false)} addButton={() => { getUsers(); setAddUser(false) }} />
               ) : null
             }
           </div>
