@@ -93,6 +93,12 @@
     letter-spacing: 0.05em;
     z-index: 10;
 
+    &[type="number"]::-webkit-outer-spin-button,
+    &[type="number"]::-webkit-inner-spin-button {
+      appearance: none;
+      margin: 0;
+    }
+
     &:invalid ~ label, &:invalid:focus ~ label {
       color: rgb(206, 16, 16);
       transform: translateY(-35px);
