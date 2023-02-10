@@ -116,14 +116,19 @@
 
 @media screen and (max-width: 575px) {
   .card {
-    height: 446px;
+    height: 363px;
     width: 300px;
     max-width: 300px;
     min-width: 200px;
+    padding: 25px;
   }
 
   .card__content {
     flex-direction: column;
+  }
+
+  .card__text {
+    font-size: 16px;
   }
 
   .card__btns {
