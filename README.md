@@ -17,6 +17,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 1. Name, email, password, age
 2. Database mysql
 
+
+Link: https://crud-next-lac.vercel.app/
+
 ## Getting Started
 
 First, run the development server:
