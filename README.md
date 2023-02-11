@@ -2,21 +2,20 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ![giphy (2)](https://user-images.githubusercontent.com/85979954/218255572-05a7dd65-89d6-404e-a343-d888de1b2cc5.gif)
 
-# Tasks:
+# Tasks
 
-## Create CRUD app for processing user data. The page should have :
+## Create CRUD app for processing user data. The page should have
 
-1. A list of all users
+### A list of all users
 
--- Form for creating new users
--- Possibility to edit existing users
--- Possibility to delete user as a button
+1. Form for creating new users
+2. Possibility to edit existing users
+3. Possibility to delete user as a button
 
-2. User data
+### User data
 
--- name, email, password, age
-
-3. Database mysql
+1. Name, email, password, age
+2. Database mysql
 
 ## Getting Started
 
