@@ -30,17 +30,17 @@ const Form: FC<FormProps> = ({
         <h2 className={styles.form__title}>{title}</h2>
         <div className={styles.input_wrapper}>
           <input type="text" onChange={handleChange} placeholder='name' name="name" value={name ? name : ''} autoComplete="off" required />
-          <label htmlFor='name'>{nameError ? nameError : 'Name'}</label>
+          <label style={{color: nameError ? 'red' : '#45f3ff'}} htmlFor='name'>{nameError ? nameError : 'Name'}</label>
           <i />
         </div>
         <div className={styles.input_wrapper}>
           <input type="number" onChange={handleChange} name="age" value={age ? age : ''} placeholder='age' required />
-          <label htmlFor='age'>{ageError ? ageError : 'Age'}</label>
+          <label style={{color: ageError ? 'red' : '#45f3ff'}} htmlFor='age'>{ageError ? ageError : 'Age'}</label>
           <i />
         </div>
         <div className={styles.input_wrapper}>
           <input type="email" onChange={handleChange} name="email" value={email ? email : ''} placeholder='email' autoComplete="off" required />
-          <label htmlFor='email'>{emailError ? emailError : 'Email'}</label>
+          <label style={{color: emailError ? 'red' : '#45f3ff'}} htmlFor='email'>{emailError ? emailError : 'Email'}</label>
           <i />
         </div>
         <div className={styles.input_wrapper}>
