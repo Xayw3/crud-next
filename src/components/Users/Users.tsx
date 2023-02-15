@@ -96,16 +96,15 @@ const Users = () => {
                       {password}
                     </h3>
                     <div className={styles.card__btns}>
-                      <div>
-                        <button 
-                          className={styles.card__btn} 
-                          onClick={() => { setUserId(id); setEdit(true); setUser({ ...user, name: name, age: age, email: email, password: password }) }}>
-                            Edit
-                        </button>
-                      </div>
-                      <div>
-                        <button className={`${styles.card__btn} ${styles.card__btn_delete}`} onClick={() => handleDelete(id)}>Delete</button>
-                      </div>
+                      <button 
+                        className={styles.card__btn} 
+                        onClick={() => { 
+                          setUserId(id); setUser({ ...user, name: name, age: age, email: email, password: password });
+                          setEdit(true); 
+                        }}>
+                          Edit
+                      </button>
+                      <button className={`${styles.card__btn} ${styles.card__btn_delete}`} onClick={() => handleDelete(id)}>Delete</button>
                     </div>
                   </div>
                 </div>
@@ -119,6 +118,10 @@ const Users = () => {
                   handleClick={handleEdit}
                   handleChange={handleChange}
                   closeBtn={() => setEdit(false)}
+                  name={user.name}
+                  age={user.age}
+                  email={user.email}
+                  password={user.password}
                 />
               ) : null
             }

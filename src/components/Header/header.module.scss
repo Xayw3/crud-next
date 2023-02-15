@@ -92,3 +92,15 @@
     }
   }
 }
+
+/* 451px-575px */
+
+@media screen and (max-width: 575px) {
+  .logo {
+    font-size: 17px;
+  }
+
+  .header_btn {
+    font-size: 17px;
+  }
+}

@@ -1,7 +1,14 @@
 @import './reset.scss';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 body {
   background-color: #333;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
 }
 
 .container {
@@ -24,38 +31,6 @@ body {
 
 @media screen and (max-width: 1300px) {
   .container {
-    max-width: 960px;
-  }
-}
-
-/* 768-991px */
-
-@media screen and (max-width: 991px) {
-  .container {
-    max-width: 720px;
-  }
-}
-
-/* 576px-767px */
-
-@media screen and (max-width: 767px) {
-  .container {
-    max-width: 540px;
-  }
-}
-
-/* 451px-575px */
-
-@media screen and (max-width: 575px) {
-  .container {
-    max-width: 95%;
-  }
-}
-
-/* 320-450px */
-
-@media screen and (max-width: 450px) {
-  .container {
-    max-width: 90%;
+    padding: 0 20px;
   }
 }
