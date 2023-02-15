@@ -1,5 +1,25 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+![giphy (2)](https://user-images.githubusercontent.com/85979954/218255572-05a7dd65-89d6-404e-a343-d888de1b2cc5.gif)
+
+# Tasks
+
+## Create CRUD app for processing user data. The page should have
+
+### A list of all users
+
+1. Form for creating new users
+2. Possibility to edit existing users
+3. Possibility to delete user as a button
+
+### User data
+
+1. Name, email, password, age
+2. Database mysql
+
+
+Link: https://crud-next-lac.vercel.app/
+
 ## Getting Started
 
 First, run the development server:
